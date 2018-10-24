@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisation.ImportProjectController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Please select the source folder of your project:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+              <Button fx:id="sourceFolderButton" onAction="#handleSourceFolderButtonAction" text="Open directory chooser" />
+            <TextField fx:id="sourceFolderPathTextField" maxWidth="400.0" prefHeight="31.0" prefWidth="925.0" visible="false" />
+            <Label fx:id="chooseFoldersLabel" text="Are these your source code and test code folders?" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="sourceClassesHBox" alignment="CENTER" prefHeight="31.0" prefWidth="777.0" spacing="20.0" visible="false">
+               <children>
+                  <Label text="Source:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sourceClassesPathTextField" prefHeight="31.0" prefWidth="400.0" />
+                  <Button fx:id="sourceClassButton" mnemonicParsing="false" onAction="#changeSourceClassesFolder" text="Change" />
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="testClassesHBox" alignment="CENTER" prefHeight="31.0" prefWidth="777.0" spacing="20.0" visible="false">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="59.0" text="Test: ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="testClassesPathTextField" prefHeight="31.0" prefWidth="400.0" />
+                  <Button fx:id="testClassesButton" mnemonicParsing="false" onAction="#changeTestClassesFolder" text="Change" />
+               </children>
+            </HBox>
+            <Label fx:id="continueLabel" text="When you are done please press the button below" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="continueButton" mnemonicParsing="false" onAction="#continueToVisualisation" text="Continue" visible="false" />
+            <Label fx:id="pleaseWaitLabel" text="Please wait while the data is loaded." visible="false">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="100.0" />
+         </padding>
+      </VBox>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label contentDisplay="CENTER" text="Visualisation Of Unit Tests">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+            <Label text="Import Project">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

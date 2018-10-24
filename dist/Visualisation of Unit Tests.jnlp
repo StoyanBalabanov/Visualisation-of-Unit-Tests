@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Visualisation of Unit Tests.jnlp">
+  <information>
+    <title>Visualisation of Unit Tests</title>
+    <vendor>UserPC</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Visualisation of Unit Tests" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="visualisation.VisualisationApplication"  name="Visualisation of Unit Tests" />
+  <update check="always"/>
+</jnlp>

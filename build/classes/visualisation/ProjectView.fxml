@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visualisation.ProjectViewController">
+   <top>
+      <VBox alignment="CENTER">
+         <children>
+            <Label text="Project Overview" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="projectNameLabel" text="Label">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </top>
+   <left>
+      <VBox prefHeight="745.0" prefWidth="305.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Code Coverage" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="coveragePercentageLabel" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="coverageElementsLabel" contentDisplay="CENTER" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Region fx:id="coverageRegion" prefHeight="27.0" prefWidth="256.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Region>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Test Results">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="testResultsLabel" text="Label">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Region fx:id="testResultsRegion" prefHeight="27.0" prefWidth="256.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="276.0" prefWidth="285.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Code Metrics">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="13.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="74.0" prefWidth="285.0">
+                     <children>
+                        <VBox fx:id="metricsVBoxLeft" alignment="CENTER" prefHeight="116.0" prefWidth="141.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="numPackagesLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="numMethodsLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="numStatementsLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="numLinesOfCodeLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="252.0" prefWidth="145.0" spacing="5.0">
+                           <children>
+                              <Label fx:id="numClassesLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="numBranchesLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="complexityLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="numNonCommentLinesOfCodeLabel" text="Label">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER" prefHeight="135.0" prefWidth="285.0" spacing="5.0">
+                     <children>
+                        <Label fx:id="complexityDensityLabel" contentDisplay="CENTER" text="Label">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="methodsPerClassLabel" text="Label">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="statementsPerMethodLabel" text="Label">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="averageMethodComplexityLabel" text="Label">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="58.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="706.0" prefWidth="669.0" spacing="12.0">
+         <children>
+            <Label text="Packages">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="packagesTableView" onMouseClicked="#userClickedOnPackagesTable" prefHeight="235.0" prefWidth="775.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="packageNameColumn" prefWidth="319.0" style="-fx-alignment: CENTER;" text="Package Name" />
+                  <TableColumn fx:id="packageClassesColumn" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Classes" />
+                <TableColumn fx:id="packageComplexityColumn" minWidth="0.0" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Complexiity" />
+                  <TableColumn fx:id="packageCoverageColumn" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Coverage" />
+              </columns>
+            </TableView>
+            <HBox alignment="TOP_CENTER" prefHeight="39.0" prefWidth="775.0">
+               <children>
+                  <Button fx:id="packageViewButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#changeSceneToDetailedPackageView" prefHeight="21.0" prefWidth="111.0" text="View Package" />
+               </children>
+            </HBox>
+            <Label text="Classes">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="classesTableView" onMouseClicked="#userClickedOnClassesTable" prefHeight="235.0" prefWidth="775.0">
+              <columns>
+                <TableColumn fx:id="classNameColumn" prefWidth="319.0" style="-fx-alignment: CENTER;" text="Class Name" />
+                <TableColumn fx:id="classTestSuccessColumn" minWidth="0.0" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Test Success" />
+                  <TableColumn fx:id="classComplexityColumn" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Complexity" />
+                  <TableColumn fx:id="classCoverageColumn" prefWidth="151.0" style="-fx-alignment: CENTER;" text="Coverage" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER">
+               <children>
+                  <Button fx:id="classViewButton" mnemonicParsing="false" onAction="#changeSceneToDetailedClassView" text="View Class" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
